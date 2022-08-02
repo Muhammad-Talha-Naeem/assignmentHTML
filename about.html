@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/style.css">
+  <title>About</title>
+</head>
+
+<body onload="nav('about')" class="bg-gray-300">
+  <div>
+    <section   style="background-image:url('./dist/images/abg.jpg')  ; background-repeat: no-repeat; background-size: 100vw 300px; "
+    class="bg-opacity-10 h-[300px]">
+      <div class="flex flex-col ">
+        <header class="text-gray-300 body-font   ">
+          <div class="container mx-auto flex flex-wrap pt-2 justify-between flex-row items-center">
+            <a href="index.html" class="flex title-font font-medium items-center mb-1 ml-2">
+              <img src="./dist/images/logo.jpg" alt="img" width="50px">
+              <span class="ml-3 text-xl">Beauty Of Lahore</span>
+            </a>
+            <div
+              class="md:mr-auto md:ml-4 md:py-1 md:pl-4 border-l border-gray-900 hidden	md:flex  lg:fixe flex-wrap items-center text-base justify-center">
+              <nav class="mx-auto flex-wrap text-base justify-center  ">
+                <a id="home" href="index.html"
+                  class=" border-blue-500 rounded-t px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">Welcom</a>
+                <a id="about" href="about.html"
+                  class=" border-blue-500 rounded-t px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">About</a>
+                <a id="culture" href="culture.html"
+                  class=" border-blue-500 rounded-t px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">Culture</a>
+                <a id="transport" href="transport.html"
+                  class=" border-blue-500 rounded-t px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">Transport</a>
+                <a id="contect" href="contectUs.html"
+                  class=" border-blue-500 rounded-t px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">Contect</a>
+              </nav>
+            </div>
+            <div class="inline-flex text-gray-900" id="log-in-div">
+  
+              <div onmouseenter="showBtn('log-in-btn')" onmouseleave="hideBtn('log-in-btn')"
+                onclick="logIn('log-in-div','log-out-div')"
+                class=" border-0 py-1 px-2 mr-2 mb-1 focus:outline-none hover:bg-gray-200 rounded active:bg-gray-300 invisible lg:visible md:visible ">
+                <span class="mr-1 rounded-full bg-white"><i class="fa-solid fa-user-circle fa-lg "></i></span>
+                <button id="log-in-btn" class=" items-center hidden  text-base ">logIn
+                  <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+              </div>
+              <button onclick="action()"
+                class=" border-0   mr-2 mb-1 lg:hidden h-fit py-0   md:hidden bg-gray-300  focus:outline-none  rounded ">
+                <i class="fa-regular fa-rectangle-list fa-xl"></i>
+  
+              </button>
+            </div>
+            <div class="inline-flex text-gray-900" id="log-out-div">
+  
+              <div onmouseenter="showBtn('log-out-btn')" onmouseleave="hideBtn('log-out-btn')"
+                onclick="logOut('log-out-div','log-in-div   ')"
+                class=" border-0 py-1 px-2 mr-2 mb-1 focus:outline-none hover:bg-gray-200 rounded active:bg-gray-300 invisible lg:visible md:visible ">
+                <span class="mr-1 rounded-full bg-white"><i class="fa-regular fa-user-circle fa-lg "></i></span>
+                <button id="log-out-btn" class=" items-center hidden  text-base">logOut
+                  <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+              </div>
+              <button onclick="showNav('sm-nav')"
+                class=" border-0   mr-2 mb-1 lg:hidden h-fit py-0   md:hidden bg-gray-300  focus:outline-none  rounded ">
+                <i class="fa-regular fa-rectangle-list fa-xl"></i>
+  
+              </button>
+            </div>
+          </div>
+          <div id="sm-nav" class="hidden md:hidden justify-between">
+  
+            <nav class=" flex  flex-col text-base justify-center">
+              <a id="home" href="index.html"
+                class="ml-2 inline-block w-min border-blue-500  px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">Welcom</a>
+              <a id="about" href="about.html"
+                class="ml-2 inline-block w-min border-blue-500  px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">About</a>
+              <a id="culture" href="culture.html"
+                class="ml-2 inline-block w-min border-blue-500  px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">Culture</a>
+              <a id="transport" href="transport.html"
+                class="ml-2 inline-block w-min border-blue-500  px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">Transport</a>
+              <a id="contect" href="contectUs.html"
+                class="ml-2 inline-block w-min border-blue-500  px-2 py-1 text-gray-50 focus:text-blue-300 hover:bg-gray-100">Contect</a>
+            </nav>
+            <div id="sm-log-in-div" class="inline-flex">
+              <div onclick="logIn('sm-log-in-div','sm-log-out-div')"
+                class=" w-max h-8 border-0 py-1 px-2 mr-2 mb-1  focus:outline-none  rounded active:bg-gray-300 ">
+                <span class="mr-1 rounded-full bg-white"><i class="fa-solid fa-user-circle fa-lg "></i></span>
+                <button id="logIn" class=" items-center active:outline-none text-gray-100 text-base">logIn
+                  <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+              </div>
+            </div>
+            <div id="sm-log-out-div" class="inline-flex">
+              <div onclick="logOut('sm-log-out-div','sm-log-in-div')"
+                class=" w-max h-8 border-0 py-1 px-2 mr-2 mb-1  focus:outline-none  rounded active:bg-gray-300   ">
+                <span class="mr-1 rounded-full bg-white"><i class="fa-regular fa-user-circle fa-lg "></i></span>
+                <button id="logIn" class=" items-center active:outline-none text-gray-100 text-base">logOut
+                  <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main id="main" class=" inline-flex lg:mt-24 md:24 sm:mt-16 mt-6">
+          <section class=" mx-auto">
+              <h1 class="font-Pacifico uppercase text-3xl text-center text-indigo-100  mb -8">About History Of Lahore</h1>
+              <p class="text-center text-yellow-100 text-lg" >
+                The first document that mentions <span class="font-semibold">Lahore</span> by name is the <span class="font-semibold">Hudud al-'Alam</span> in 982 in which Lahore is mentioned as a town which had <span class="font-semibold">impressive temples, large markets</span> and<span class="font-semibold"> huge orchards</span>.
+              </p>
+          </section>
+        </main>
+      </div>
+    </section>
+    <div onclick="reaction()">
+
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-4 mx-auto">
+        <div id="ghaznavid-era" class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+          <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+            <img src="./dist/images/about/Data_Durbar.jpg" alt="" class="h-full rounded-full">
+          </div>
+          <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Ghaznavid Era</h2>
+            <p class="leading-relaxed text-base"><span class="font-semibold">Sultan Mahmud</span> of Ghazni captured Lahore, somewhere in 1020–1027. Under Ghaznavid rule, Lahore emerged effectively as the empire's second capital In 1021</p>
+          </div>
+        </div>
+        <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+          <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Late Sultanates after Tughluq</h2>
+            <p class="leading-relaxed text-base"> <span class="font-semibold">Timur</span>  gave control of the Lahore region to <span class="font-semibold">Khizr Khan</span>, Governor of Multan, who later established the Sayyid dynasty in 1414 – the fourth dynasty of the <span class="font-semibold">Delhi Sultanate</span>.</p>
+          </div>
+          <div class="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+           <img src="./dist/images/about/NeevinMos.jpg" alt="" class="h-full rounded-full">
+          </div>
+        </div>
+        <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col mb-10 pb-10 border-b border-gray-200 ">
+          <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+            <img src="./dist/images/about/Wazir_Khan_Mosque.jpg" alt="mosque" class="h-full w-full rounded-full">
+          </div>
+          <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Akbar Era</h2>
+            <p class="leading-relaxed text-base">Beginning in 1584, Lahore became the <span class="font-semibold">Mughal</span> capital when <span class="font-semibold">Akbar</span> began re-fortifying the city's ruined citadel, laying the foundations for the revival of the <span class="font-semibold">Lahore Fort</span>.</p>
+          </div>
+        </div>
+        <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+          <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Late Mughal</h2>
+            <p class="leading-relaxed text-base">Civil wars regarding succession to the Mughal throne following <span class="font-semibold">Aurangzeb</span>'s death in 1707 lead to weakening control over Lahore from Delhi, and a prolonged period of decline in Lahore.</p>
+          </div>
+          <div class="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+           <img src="./dist/images/about/Lahore_Fort.jpg" alt="" class="h-full rounded-full">
+          </div>
+        </div>
+        <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col mb-10 pb-10 border-b border-gray-200 ">
+          <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+            <img src="./dist/images/about/Wazir_Khan_Mosque.jpg" alt="mosque" class="h-full w-full rounded-full">
+          </div>
+          <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Sikh Era</h2>
+            <p class="leading-relaxed text-base">Expanding <span class="font-semibold">Sikh Misls</span> secured control over Lahore in 1767, when the Bhangi Misl state captured the city. In 1780, The city was divided among three rulers, <span class="font-semibold">Gujjar Singh, Lahna Singh</span>, and <span class="font-semibold">Sikh Misls</span> Sobha Singh</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <footer class="text-gray-600 body-font bg-yellow-100">
+      <div class="container px-5 py-3 mx-auto flex items-center sm:flex-row flex-col">
+        <a href="index.html" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <img src="./dist/images/logo.jpg" alt="img" width="50px">
+  
+          <span class="ml-3 text-xl">Beauti Of Lahore</span>
+        </a>
+        <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022 Talha —
+          <a href="#" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@devleper</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <a href="#" class="text-gray-500">
+            <i class="fa-brands fa-facebook-f fa-lg"></i>
+          </a>
+          <a href="#" class="ml-3 text-gray-500">
+            <i class="fa-brands fa-twitter fa-lg"></i>
+          </a>
+          <a href="#" class="ml-3 text-gray-500">
+            <i class="fa-brands fa-instagram fa-lg"></i>
+          </a>
+          <a href="#" class="ml-3 text-gray-500"><i class="fa-brands fa-linkedin-in fa-lg"></i>
+            
+          </a>
+        </span>
+      </div>
+    </footer>
+  </div>  
+<script src="./dist//app.js"></script>
+<script src="https://kit.fontawesome.com/4c75368bcb.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
