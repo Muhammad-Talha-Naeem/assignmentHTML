@@ -35,15 +35,15 @@ window.valid = () => {
     let email = document.querySelector(`#email`).value;
     let msg = document.querySelector(`#message`).value;
     if (name == null || name.length < 4){
-        document.querySelector(`#nameErr`).innerHTML = "Name field is emty";
+        document.querySelector(`#nameErr`).innerHTML = "Name field is empty";
         err = false;
     }
     if (!email.endsWith(`@gmail.com`)){
-        document.querySelector(`#passErr`).innerHTML = "Password field is emty";
+        document.querySelector(`#passErr`).innerHTML = "Password field is empty";
         err = false;
     }
     if (msg == null || msg.length < 5){
-        document.querySelector(`#msgErr`).innerHTML = "No mwssae Written";
+        document.querySelector(`#msgErr`).innerHTML = "No massage Written";
         err = false;
     }
     return err;
